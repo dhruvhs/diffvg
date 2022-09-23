@@ -17,6 +17,17 @@ diffvg is a differentiable rasterizer for 2D vector graphics. See the webpage fo
 ![ellipse_transform](https://user-images.githubusercontent.com/951021/67149013-06b54700-f25b-11e9-91eb-a61171c6d4a4.gif)
 
 # Install
+
+## Ampere GPU
+```
+git submodule update --init --recursive
+conda create -n py37 python=3.7
+conda activate py37
+conda install -y pytorch torchvision torchaudio cudatoolkit=11.6 numpy scikit-image ffmpeg cmake -c pytorch -c anaconda -c conda-forge 
+pip install svgwrite svgpathtools cssutils numba torch-tools visdom
+python setup.py install
+```
+
 ```
 git submodule update --init --recursive
 conda install -y pytorch torchvision -c pytorch
